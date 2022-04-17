@@ -9,4 +9,6 @@ import org.springframework.stereotype.Service
 class BankService constructor(val bankDataSource: MockBankDataSource) {
 
     fun getBanks(): Collection<Bank> = bankDataSource.retrieveBanks()
+
+    fun getBank(accountNumber: String): Bank = bankDataSource.retrieveBank(accountNumber)
 }

@@ -1,6 +1,5 @@
 package com.example.spring_tutorial.controller
 
-import com.example.spring_tutorial.mock.MockBankDataSource
 import com.example.spring_tutorial.model.Bank
 import com.example.spring_tutorial.service.BankService
 import com.nhaarman.mockitokotlin2.mock
@@ -25,7 +24,7 @@ class BankControllerTest {
     fun `test controller returns data`(){
         Mockito.`when`(bankService.getBanks()).thenReturn(
             listOf(
-                Bank(1234, 12.0, 10)
+                Bank("1234", 12.0, 10)
             )
         )
 
